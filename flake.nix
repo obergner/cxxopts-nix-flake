@@ -1,5 +1,5 @@
 {
-  description = "The CXXOpts C++ command line parsing library, with unicode support disable";
+  description = "The CXXOpts C++ command line parsing library, with unicode support disabled";
 
   inputs = {
     nixpkgs.url     = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -14,8 +14,8 @@
 	   (system:
            let
              	pkgs = import nixpkgs { inherit system; };
-             	version = "1.13.0";
 		          packageName = "cxxopts";
+             	version = "3.1.1";
            in {
                 packages.${packageName} = pkgs.stdenv.mkDerivation rec {
                   pname = packageName;
